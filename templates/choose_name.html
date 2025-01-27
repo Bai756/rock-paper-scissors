@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='name_styles.css') }}">
+</head>
+<body>
+    <div class="name-form-container">
+        <form action="/choose_name" method="post" class="name-form">
+            <h1>Choose Your Name</h1>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 20px;
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1565c0;
+    transform: scale(1.05);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.choices {
+    grid-column: span 2;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.choices h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.choices button {
+    font-size: 1.5em;
+}
+
+.game-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.game-info > div {
+    flex: 1 1 calc(33% - 20px);
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.leaderboard {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.leaderboard h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.leaderboard ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.leaderboard li {
+    font-size: 1em;
+    margin: 5px 0;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-button form {
+    display: inline-block;
+}
+
+.reset-button button {
+    font-size: 1.2em;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reset-button button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

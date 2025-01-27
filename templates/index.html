@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="main-container">
+        <div class="choices">
+            <h2>Choose</h2>
+            <button onclick="updateScore('Rock')">Rock</button>
+            <button onclick="updateScore('Paper')">Paper</button>
+            <button onclick="updateScore('Scissors')">Scissors</button>
+        </div>
+
+        <div class="game-info">
+            <div>
+                <h2>Computer Choice</h2>
+                <p id="computer_choice"></p>
+            </div>
+            <div>
+                <h2>Your Choice</h2>
+                <p id="user_choice"></p>
+            </div>
+            <div>
+                <h2>Status</h2>
+                <p id="status"></p>
+            </div>
+            <div>
+                <h2>Score</h2>
+                <p id="score">{{ score }}</p>
+            </div>
+            <div>
+                <h2>Streak</h2>
+                <p id="streak">{{ streak }}</p>
+            </div>
+            <div>
+                <h2>Longest Streak</h2>
+                <p id="longest_streak">{{ longest_streak }}</p>
+            </div>
+        </div>
+
+        <div class="leaderboard-container">
+            <div class="leaderboard">
+                <h2>Leaderboard for longest streak</h2>
+                <ol id="leaderboard">
+                    {% for player, score in leaderboard.items() %}
+                        <li>{{ player }}: {{ score }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="leaderboard">
+                <h2>Leaderboard for highest score</h2>
+                <ol id="highest_score_leaderboard">
+                    {% for player, score in score_board.items() %}
+                        <li>{{ player }}: {{ score }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+        
+    <div class="reset-button">
+        <form action="/reset" method="post">
+            <button type="submit">Reset Everything</button>
+        </form>
+    </div>
+</body>
+
+</html>
